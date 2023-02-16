@@ -17,6 +17,7 @@ const options = {
 export class WeatherService {
   constructor(private http: HttpClient) {}
 
+  // Added proxy path url for CORS Issue resolving
   url = "http://localhost:4200/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m";
 
   getWeather(): Observable<any> {
